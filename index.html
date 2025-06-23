@@ -464,12 +464,12 @@
                 const cancelledAmount = cancelled.reduce((sum, t) => sum + (t.amount || 0), 0);
                 
                 return { 
-                    approved: approved.length, 
-                    cancelled: cancelled.length, 
-                    approvedAmount, 
-                    cancelledAmount,
-                    total: transactions.length,
-                    totalAmount: approvedAmount + cancelledAmount
+                     approved: approved.length,
+         cancelled: cancelled.length,
+         approvedAmount,
+         cancelledAmount,
+        total: transactions.length,
+        totalAmount: approvedAmount + Math.abs(cancelledAmount)
                 };
             };
 
